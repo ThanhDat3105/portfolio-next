@@ -1,0 +1,48 @@
+.marquee-init {
+  .marquee-animation {
+    .item-marquee {
+      min-width: max-content;
+      padding: 8px 20px;
+      background-color: #0f0f0f;
+      line-height: 28px;
+      border-radius: 6px;
+
+      svg {
+        @media (max-width: 768px) {
+          margin-right: 10px;
+        }
+      }
+
+      span {
+        font-size: 16px;
+        color: #d7d9ff;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(6, 6, 6, 1), rgba(6, 6, 6, 0));
+    opacity: 1;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(6, 6, 6, 1), rgba(6, 6, 6, 0));
+    opacity: 1;
+    z-index: 5;
+    pointer-events: none;
+  }
+}

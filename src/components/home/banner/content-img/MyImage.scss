@@ -1,0 +1,46 @@
+.img {
+  .top {
+    animation: 1s ease 0s infinite alternate none running up-down;
+  }
+
+  .bottom {
+    -webkit-text-stroke: 1px white;
+    animation: 0.9s ease 0s infinite alternate none running up-down2;
+  }
+
+  img {
+    animation: zoom-in 0.8s ease-in-out;
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0.1;
+    scale: 1.05;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down2 {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
