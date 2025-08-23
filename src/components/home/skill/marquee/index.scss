@@ -1,21 +1,19 @@
 .marquee-init {
   .marquee-animation {
     .item-marquee {
-      min-width: max-content;
-      padding: 8px 20px;
-      background-color: #0f0f0f;
+      padding: 4px 8px;
+      background-color: transparent;
       line-height: 28px;
       border-radius: 6px;
-
-      svg {
-        @media (max-width: 768px) {
-          margin-right: 10px;
-        }
-      }
 
       span {
         font-size: 16px;
         color: #d7d9ff;
+      }
+
+      @media (min-width: 640px) {
+        padding: 8px 16px;
+        background-color: #0f0f0f;
       }
     }
   }
