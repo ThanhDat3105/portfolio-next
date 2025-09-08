@@ -8,21 +8,20 @@ export const metadata: Metadata = {
 export default async function Layout({
   banner,
   skill,
-  project
+  project,
+  company
 }: {
   banner: React.ReactNode;
   skill: React.ReactNode;
   project: React.ReactNode;
+  company: React.ReactNode;
 }) {
   return (
-    <body>
-      <div id='smooth-wrapper'>
-        <div id='smooth-content'>
-          {banner}
-          {skill}
-          {project}
-        </div>
-      </div>
-    </body>
+    <div className='bg-[#060606]'>
+      {banner}
+      {skill}
+      {project}
+      {company}
+    </div>
   );
 }

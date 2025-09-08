@@ -13,8 +13,8 @@ export default function page() {
 
       <div className='banner'>
         <Container>
-          <div className='relative right-0 left-0 z-[5] pt-[60px]'>
-            <div className='mt-8 flex h-full flex-col-reverse gap-10 lg:flex-row xl:gap-40'>
+          <div className='relative right-0 left-0 z-[5] pt-5'>
+            <div className='flex h-full flex-col-reverse gap-10 lg:flex-row xl:gap-40'>
               <ContentTyped />
               <MyImage />
             </div>
