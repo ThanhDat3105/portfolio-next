@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import type { IOptions, RecursivePartial } from '@tsparticles/engine';
-import particlesH from '@/src/config/particlesHexagons.json';
+import particlesL from '@/src/config/particlesLink.json';
 
 export default function ParticlesBackground() {
   const [init, setInit] = useState(false);
@@ -24,7 +24,7 @@ export default function ParticlesBackground() {
         {init && (
           <Particles
             id='tsparticles'
-            options={particlesH as RecursivePartial<IOptions>}
+            options={particlesL as RecursivePartial<IOptions>}
           />
         )}
       </div>

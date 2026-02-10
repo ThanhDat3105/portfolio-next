@@ -56,3 +56,53 @@ export const dataProject = [
     image: '/images/project/course-project.png'
   }
 ];
+
+export const companies = [
+  {
+    id: 1,
+    name: 'THD Security',
+    email: 'sales@thdcybersecurity.com',
+    location: 'HCM, Vietnam',
+    fullLocation: 'District 1, Ho Chi Minh City, Vietnam',
+    social: [
+      { name: 'facebook', url: '#' },
+      {
+        name: 'linkedin',
+        url: 'https://www.linkedin.com/company/thdcybersecurity/posts/?feedView=all'
+      },
+      { name: 'twitter', url: '#' },
+      { name: 'instagram', url: '#' }
+    ],
+    introduce: {
+      title: 'THD Cyber Security Joint Stock Company',
+      description:
+        'THD Cyber Security Joint Stock Company is a Vietnamese enterprise specializing in cybersecurity solutions and information security services. The company focuses on protecting digital systems, networks, and data for businesses through security consulting, system monitoring, and risk assessment. With a strong emphasis on technology and reliability, THD aims to help organizations operate safely in an increasingly digital environment.'
+    },
+    experiences: 'Too many to list',
+    banner: '/images/banner/background-banner.jpg',
+    avatar: '/images/logo/logo_THD.png',
+    role: 'Front-end Intern',
+    time: '2023',
+    position: 'Frontend Developer',
+    website: 'https://thdcybersecurity.com/',
+    description:
+      'THD Cyber Security cung cấp giải pháp an ninh mạng hiện đại, toàn diện, giúp doanh nghiệp Việt Nam an toàn trước mọi mối đe dọa số.',
+    projects: [
+      {
+        name: 'THD E-learning',
+        description: 'Dự án hệ thống E-learning nội bộ công ty.',
+        link: '',
+        image: '/images/projects/project-elearning.png'
+      }
+    ],
+    tech: [
+      { name: 'js-icon', displayName: 'JavaScript', color: '#F7DF1E' },
+      { name: 'ts-icon', displayName: 'TypeScript', color: '#3178C6' },
+      { name: 'react-icon', displayName: 'React', color: '#61DAFB' },
+      { name: 'axios-icon', displayName: 'Axios', color: '#5A29E4' },
+      { name: 'sass-icon', displayName: 'Sass', color: '#CC6699' },
+      { name: 'tailwind-icon', displayName: 'Tailwind CSS', color: '#38B2AC' },
+      { name: 'antd-icon', displayName: 'Ant Design', color: '#1677FF' }
+    ]
+  }
+];

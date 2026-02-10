@@ -2,32 +2,41 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-interface Props {
-  data: {
-    id: number;
+export interface CompanyData {
+  id: number;
+  name: string;
+  email: string;
+  location: string;
+  social: {
     name: string;
-    email: string;
-    social: {
-      name: string;
-      url: string;
-    }[];
-    banner: string;
-    avatar: string;
-    role: string;
-    time: string;
-    position: string;
+    url: string;
+  }[];
+  introduce: {
+    title: string;
     description: string;
-    projects: {
-      name: string;
-      description: string;
-      link: string;
-    }[];
-    tech: {
-      name: string;
-      displayName: string;
-      color: string;
-    }[];
   };
+  banner: string;
+  avatar: string;
+  role: string;
+  time: string;
+  position: string;
+  description: string;
+  projects: {
+    name: string;
+    description: string;
+    link: string;
+  }[];
+  website: string;
+  fullLocation: string;
+  tech: {
+    name: string;
+    displayName: string;
+    color: string;
+  }[];
+}
+
+interface Props {
+  data: CompanyData;
 }
 
 export default function CompanyItem({ data }: Props) {
