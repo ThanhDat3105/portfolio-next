@@ -2,27 +2,31 @@
 
 import CompanyItem from '@/src/components/company/CompanyItem';
 import Container from '@/src/components/container/Page';
+import ScrollPower3Out from '@/src/components/gsap/ScrollPower3Out';
 import { companies } from '@/src/constant/mock-data';
+import { useRef } from 'react';
 
-export default function Portfolio() {
+export default function CompaniesPage() {
+  const contentRef = useRef<HTMLDivElement>(null);
+
   return (
-    <div className='relative mt-20 min-h-screen overflow-hidden text-white'>
-      {/* 🔥 Background wave effect */}
-      <div className='absolute inset-0 -z-10 bg-black'>
-        <div className='animate-wave absolute inset-0 bg-gradient-to-r from-[#ff014f]/30 via-transparent to-[#ff014f]/30'></div>
+    <ScrollPower3Out childrenRef={contentRef as React.RefObject<HTMLElement>}>
+      <div
+        className='relative mt-20 overflow-hidden text-white'
+        ref={contentRef}
+      >
+        <Container>
+          <h1 className='mb-10 text-center text-5xl font-extrabold tracking-wide text-[#ff014f] md:mb-20'>
+            Companies I’ve Worked With
+          </h1>
+
+          <div className='grid gap-8 md:grid-cols-2'>
+            {companies.map((company) => (
+              <CompanyItem key={company.id} data={company} />
+            ))}
+          </div>
+        </Container>
       </div>
-
-      <Container>
-        <h1 className='mb-10 text-center text-5xl font-extrabold tracking-wide text-[#ff014f] md:mb-20'>
-          Companies I’ve Worked With
-        </h1>
-
-        <div className='grid gap-8 md:grid-cols-2'>
-          {companies.map((company) => (
-            <CompanyItem key={company.id} data={company} />
-          ))}
-        </div>
-      </Container>
-    </div>
+    </ScrollPower3Out>
   );
 }

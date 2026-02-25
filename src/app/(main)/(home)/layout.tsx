@@ -19,7 +19,7 @@ export default async function Layout({
   educationAndCertificate: React.ReactNode;
 }) {
   return (
-    <div className='bg-[#060606]'>
+    <div>
       {banner}
       {educationAndCertificate}
       {skill}
