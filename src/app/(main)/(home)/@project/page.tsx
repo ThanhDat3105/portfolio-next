@@ -1,14 +1,17 @@
 'use client';
 
 import Container from '@/src/components/container/Page';
+import ScrollPower3Out from '@/src/components/gsap/ScrollPower3Out';
 import HoverPreviewImage from '@/src/components/home/project/HoverPreviewImage';
 import ItemActive from '@/src/components/home/project/ItemActive';
 import ItemProject from '@/src/components/home/project/ItemProject';
 import ItemProjectSmall from '@/src/components/home/project/ItemProjectSmall';
 import { dataProject } from '@/src/constant/mock-data';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 export default function ProjectsPage() {
+  const contentRef = useRef<HTMLDivElement>(null);
+
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   const [preview, setPreview] = useState<null | {
     src: string;
@@ -60,48 +63,51 @@ export default function ProjectsPage() {
   };
 
   return (
-    <div className='mt-20 overflow-hidden'>
-      <Container>
-        <div className='mb-10 text-center md:mb-16'>
-          <h1 className='mb-4 text-5xl font-bold text-[#ff014f]'>
-            My Projects
-          </h1>
-          <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300'>
-            A collection of projects showcasing my design and development skills
-          </p>
-        </div>
+    <ScrollPower3Out childrenRef={contentRef as React.RefObject<HTMLElement>}>
+      <div className='mt-20 overflow-hidden' ref={contentRef}>
+        <Container>
+          <div className='mb-10 text-center md:mb-16'>
+            <h1 className='mb-4 text-5xl font-bold text-[#ff014f]'>
+              My Projects
+            </h1>
+            <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300'>
+              A collection of projects showcasing my design and development
+              skills
+            </p>
+          </div>
 
-        <div
-          id='projects'
-          className='relative hidden flex-col justify-center lg:flex'
-          onMouseMove={handleMouseMove}
-        >
-          {dataProject.map((item, index) => (
-            <ItemProject
-              key={index}
-              index={index}
-              heightItem={heightItem}
-              item={item}
-              handleMouseEnter={handleMouseEnter}
-              handleMouseLeave={handleMouseLeave}
-            />
-          ))}
+          <div
+            id='projects'
+            className='relative hidden flex-col justify-center lg:flex'
+            onMouseMove={handleMouseMove}
+          >
+            {dataProject.map((item, index) => (
+              <ItemProject
+                key={index}
+                index={index}
+                heightItem={heightItem}
+                item={item}
+                handleMouseEnter={handleMouseEnter}
+                handleMouseLeave={handleMouseLeave}
+              />
+            ))}
 
-          <ItemActive heightItem={heightItem} hoveredIndex={hoveredIndex} />
+            <ItemActive heightItem={heightItem} hoveredIndex={hoveredIndex} />
 
-          <HoverPreviewImage preview={preview} />
-        </div>
+            <HoverPreviewImage preview={preview} />
+          </div>
 
-        <div
-          id='projects'
-          className='relative flex flex-col justify-center lg:hidden gap-5'
-          onMouseMove={handleMouseMove}
-        >
-          {dataProject.map((item, index) => (
-            <ItemProjectSmall key={index} item={item} />
-          ))}
-        </div>
-      </Container>
-    </div>
+          <div
+            id='projects'
+            className='relative flex flex-col justify-center gap-5 lg:hidden'
+            onMouseMove={handleMouseMove}
+          >
+            {dataProject.map((item, index) => (
+              <ItemProjectSmall key={index} item={item} />
+            ))}
+          </div>
+        </Container>
+      </div>
+    </ScrollPower3Out>
   );
 }
