@@ -106,3 +106,25 @@ export const companies = [
     ]
   }
 ];
+
+export const certificates = [
+  {
+    id: 1,
+    name: 'Full-Stack Web Development',
+    organization: 'CyberSoft Academy',
+    date: '2023',
+    description:
+      'Trained in full-stack development (React, Node.js, MongoDB) with practical project experience.'
+  }
+];
+
+export const educations = [
+  {
+    id: 1,
+    name: 'Gia Dinh University',
+    major: 'Software Engineering',
+    date: '2021 - 2023',
+    description:
+      'Pursuing a degree in Software Engineering, focusing on web development, algorithms, and software design principles.'
+  }
+];

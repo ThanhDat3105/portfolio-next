@@ -9,16 +9,19 @@ export default async function Layout({
   banner,
   skill,
   project,
-  company
+  company,
+  educationAndCertificate
 }: {
   banner: React.ReactNode;
   skill: React.ReactNode;
   project: React.ReactNode;
   company: React.ReactNode;
+  educationAndCertificate: React.ReactNode;
 }) {
   return (
     <div className='bg-[#060606]'>
       {banner}
+      {educationAndCertificate}
       {skill}
       {project}
       {company}
