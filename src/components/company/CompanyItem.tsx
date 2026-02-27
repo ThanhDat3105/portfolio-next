@@ -44,7 +44,7 @@ export default function CompanyItem({ data }: Props) {
     <Link
       href={`/company/${data.id}`}
       key={data.id}
-      className='relative overflow-hidden rounded-2xl p-[2px] shadow-lg'
+      className='relative overflow-hidden rounded-2xl p-[2px] shadow-lg transition-transform duration-300 hover:-translate-y-1'
     >
       {/* 🔥 Border xoay */}
       <div className='animate-rotate absolute top-1/2 left-1/2 h-1/2 w-[200%] -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-red-500'></div>
