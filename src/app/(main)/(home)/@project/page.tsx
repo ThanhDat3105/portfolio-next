@@ -63,7 +63,7 @@ export default function ProjectsPage() {
   };
 
   return (
-    <div className='mt-20 overflow-hidden'>
+    <div className='mt-0 overflow-hidden md:mt-14 lg:mt-20'>
       <Container>
         <ScrollPower3Out
           childrenRef={contentRef as React.RefObject<HTMLElement>}

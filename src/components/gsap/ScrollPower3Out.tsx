@@ -14,7 +14,7 @@ export default function ScrollPower3Out({
 
       gsap.fromTo(
         childrenRef.current,
-        { y: 60, opacity: 0 },
+        { y: 100, opacity: 0 },
         {
           y: 0,
           opacity: 1,

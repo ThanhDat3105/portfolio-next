@@ -36,7 +36,7 @@ export default function EducationAndCertificate() {
   }, []);
 
   return (
-    <div className='mt-20'>
+    <div className='mt-0 md:mt-14 lg:mt-20'>
       <Container>
         <ScrollPower3Out childrenRef={titleRef as React.RefObject<HTMLElement>}>
           <div ref={titleRef} className='mb-10 md:mb-20'>

@@ -11,7 +11,7 @@ export default function SkillPage() {
 
   return (
     <ScrollPower3Out childrenRef={contentRef as React.RefObject<HTMLElement>}>
-      <div className='mt-20' ref={contentRef}>
+      <div className='mt-0 md:mt-14 lg:mt-20' ref={contentRef}>
         <Container>
           <h1 className='mb-10 text-center text-5xl font-bold text-[#ff014f] md:mb-20'>
             My Skills

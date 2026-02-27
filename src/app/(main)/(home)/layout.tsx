@@ -10,13 +10,15 @@ export default async function Layout({
   skill,
   project,
   company,
-  educationAndCertificate
+  educationAndCertificate,
+  contact
 }: {
   banner: React.ReactNode;
   skill: React.ReactNode;
   project: React.ReactNode;
   company: React.ReactNode;
   educationAndCertificate: React.ReactNode;
+  contact: React.ReactNode;
 }) {
   return (
     <div>
@@ -25,6 +27,7 @@ export default async function Layout({
       {skill}
       {project}
       {company}
+      {contact}
     </div>
   );
 }
