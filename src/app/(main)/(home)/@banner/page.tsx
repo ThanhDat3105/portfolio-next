@@ -6,14 +6,14 @@ import React from 'react';
 
 export default function page() {
   return (
-    <div className='relative'>
+    <div className='relative' id='aboutMePage'>
       <div className='absolute h-full w-full'>
         <ParticlesView />
       </div>
 
       <div className='banner'>
         <Container>
-          <div className='relative right-0 left-0 z-[5] pt-5'>
+          <div className='relative right-0 left-0 z-[5] pt-20'>
             <div className='flex h-full flex-col-reverse gap-10 lg:flex-row xl:gap-40'>
               <ContentTyped />
               <MyImage />

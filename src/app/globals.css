@@ -112,3 +112,32 @@
   position: relative;
   z-index: 2;
 }
+
+.hoverItemMenu {
+  transition: all 0.4s ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    padding: 8px 16px;
+    background: #ff014f;
+    width: 110%;
+    height: 100%;
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    box-sizing: content-box;
+  }
+
+  &:hover::after {
+    opacity: 0.2;
+  }
+
+  &:hover {
+    color: #ff014f;
+  }
+}

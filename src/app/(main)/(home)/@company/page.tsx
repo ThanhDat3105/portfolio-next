@@ -11,9 +11,10 @@ export default function CompaniesPage() {
 
   return (
     <ScrollPower3Out childrenRef={contentRef as React.RefObject<HTMLElement>}>
-      <div
-        className='relative mt-0 overflow-hidden text-white md:mt-14 lg:mt-20'
+      <section
+        className='relative mt-0 scroll-mt-32 overflow-hidden text-white md:mt-14 lg:mt-80'
         ref={contentRef}
+        id='companiesPage'
       >
         <Container>
           <h1 className='mb-10 text-center text-5xl font-extrabold tracking-wide text-[#ff014f] md:mb-20'>
@@ -26,7 +27,7 @@ export default function CompaniesPage() {
             ))}
           </div>
         </Container>
-      </div>
+      </section>
     </ScrollPower3Out>
   );
 }

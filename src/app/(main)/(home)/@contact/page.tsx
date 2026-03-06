@@ -11,7 +11,11 @@ export default function SkillPage() {
 
   return (
     <ScrollPower3Out childrenRef={contentRef as React.RefObject<HTMLElement>}>
-      <div className='mt-0 md:mt-14 lg:mt-20' ref={contentRef}>
+      <div
+        className='mt-0 scroll-mt-32 md:mt-14 lg:mt-20'
+        ref={contentRef}
+        id='contactPage'
+      >
         <Container>
           <GlowCard>
             <div className='flex flex-col justify-center gap-10 p-6 py-10 md:p-12 lg:flex-row lg:p-16 xl:p-20'>

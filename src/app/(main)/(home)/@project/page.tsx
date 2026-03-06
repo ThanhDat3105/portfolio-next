@@ -63,7 +63,10 @@ export default function ProjectsPage() {
   };
 
   return (
-    <div className='mt-0 overflow-hidden md:mt-14 lg:mt-20'>
+    <div
+      className='mt-0 scroll-mt-32 overflow-hidden md:mt-14 lg:mt-20'
+      id='projectsPage'
+    >
       <Container>
         <ScrollPower3Out
           childrenRef={contentRef as React.RefObject<HTMLElement>}
