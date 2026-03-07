@@ -1,10 +1,3 @@
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Portfolio Home',
-  description: 'Home Page Portfolio'
-};
-
 export default async function Layout({
   banner,
   skill,
