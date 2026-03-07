@@ -27,7 +27,7 @@ export default function JsonLd({ data }: JsonLdProps) {
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(Array.isArray(data) ? data : data)
       }}
-      strategy='beforeInteractive' // Load before page becomes interactive
+      strategy='afterInteractive' // Load after page becomes interactive
     />
   );
 }
