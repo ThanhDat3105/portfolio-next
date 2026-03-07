@@ -12,6 +12,7 @@ export default function page() {
       </div>
 
       <div className='banner'>
+        kdaslkdhaslkhdaslhdaslhdlksah
         <Container>
           <div className='relative right-0 left-0 z-[5] pt-20'>
             <div className='flex h-full flex-col-reverse gap-10 lg:flex-row xl:gap-40'>
