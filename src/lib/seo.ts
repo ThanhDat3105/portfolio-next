@@ -19,7 +19,7 @@ export const baseMetadata: Metadata = {
     template: `%s | ${siteConfig.name}` // Page Title | Site Name
   },
   description: siteConfig.description,
-  keywords: siteConfig.keywords,
+  keywords: [...siteConfig.keywords],
   authors: [
     {
       name: siteConfig.author.name,
@@ -44,7 +44,7 @@ export const baseMetadata: Metadata = {
     siteName: siteConfig.openGraph.siteName,
     title: siteConfig.openGraph.title,
     description: siteConfig.openGraph.description,
-    images: siteConfig.openGraph.images
+    images: [...siteConfig.openGraph.images]
   },
 
   // Twitter Card metadata
@@ -54,7 +54,7 @@ export const baseMetadata: Metadata = {
     description: siteConfig.description,
     creator: siteConfig.twitter.handle,
     site: siteConfig.twitter.site,
-    images: siteConfig.openGraph.images
+    images: [...siteConfig.openGraph.images]
   },
 
   // Icons and theme
@@ -77,9 +77,6 @@ export const baseMetadata: Metadata = {
   alternates: {
     canonical: siteConfig.url
   },
-
-  // Language and region
-  language: 'en-US',
 
   // Prevents translation prompts in browsers
   category: 'technology'
@@ -116,7 +113,7 @@ export function generateMetadata({
   return {
     title,
     description,
-    keywords: keywords || siteConfig.keywords,
+    keywords: keywords || [...siteConfig.keywords],
 
     // Canonical URL prevents duplicate content issues
     alternates: {
@@ -188,7 +185,7 @@ export function generateArticleMetadata({
   return {
     title,
     description,
-    keywords: tags || siteConfig.keywords,
+    keywords: tags || [...siteConfig.keywords],
 
     alternates: {
       canonical: url
