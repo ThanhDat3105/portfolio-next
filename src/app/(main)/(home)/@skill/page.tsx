@@ -18,7 +18,7 @@ export default function SkillPage() {
       >
         <Container>
           <h1 className='mb-10 text-center text-5xl font-bold text-[#ff014f] md:mb-20'>
-            My Skills
+            My Skills kdaslkdhaslkhdaslhdaslhdlksah
           </h1>
           <div className='flex flex-col justify-center gap-5'>
             <Marquee data={dataFramework} width='100%' />
