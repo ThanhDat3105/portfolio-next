@@ -10,6 +10,7 @@ import {
   getPersonSchema,
   getWebsiteSchema
 } from '../lib/structured-data';
+import { Analytics } from '@vercel/analytics/next';
 
 // Font optimization with next/font
 const geistSans = Geist({
@@ -54,6 +55,7 @@ export default function RootLayout({
         >
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );
